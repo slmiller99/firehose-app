@@ -4,6 +4,10 @@
       Save Your Lesson
     </h1>
 
+    <% if @pic.errors.present? %>
+    <h2> One problem about the lesson is: <%= @pic.errors[:lesson].first %> </h2>
+    <% end %>
+
     <br/>
 
       <%= simple_form_for @pic do |f| %>
